@@ -29,7 +29,7 @@ const loadToStorage = () => {
     }
 };
 
-loadFromStorage();
+loadToStorage();
 
 
 form.addEventListener(`submit` , event => {
@@ -42,4 +42,6 @@ form.addEventListener(`submit` , event => {
             message: message.value,
         });
     }
+    form.reset();
+    localStorage.removeItem(storageKey);
 })
